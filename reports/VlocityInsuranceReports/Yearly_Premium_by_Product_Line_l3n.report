@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>InsurancePolicy$PolicyName</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$Name</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$NameInsured</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$Producer</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$vlocity_ins_fsc__ProductCode__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>InsurancePolicy$StandardPremiumAmount</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>InsurancePolicy$Product</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Yearly Premium by Product Line</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Insurance_Policy_Reports__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>InsurancePolicy$ExpirationDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

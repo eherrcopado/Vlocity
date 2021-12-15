@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>Getting_Started_with_Insurance_Express_Property_and_Casualty</flexiPage>
+    <label>Getting Started with Insurance Express</label>
+    <motif>Custom67: Gears</motif>
+</CustomTab>

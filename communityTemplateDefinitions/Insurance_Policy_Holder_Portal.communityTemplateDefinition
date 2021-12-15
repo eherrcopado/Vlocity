@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityTemplateDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseTemplate>c</baseTemplate>
+    <bundlesInfo>
+        <description>Customers can manage their account information, view their policy transaction and activity history, Manage billing, initiate policy changes and claims in real time.</description>
+        <order>1</order>
+        <title>Customer self-service</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <description>Powered by einstein analytics, Customers can be provided relevant suggestions, offers and next best actions.</description>
+        <order>2</order>
+        <title>Intelligent suggestions</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <description>Accessible on web, mobile or salesforce apps; customers can access their policy information on any device any time.</description>
+        <order>3</order>
+        <title>Mobile enabled</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <image>Insurance_Policy_Holder_Portal_preview</image>
+        <order>1</order>
+        <title>Insurance_Policy_Holder_Portal_preview</title>
+        <type>PreviewImage</type>
+    </bundlesInfo>
+    <category>Service</category>
+    <defaultThemeDefinition>Insurance_Policy_Holder_Portal</defaultThemeDefinition>
+    <description>Brandable Policyholder portal provides policy self servicing features for your policyholders. Available on web, on mobile and through the salesforce mobile app, the policyholder portal allows customers to view and manage their policies and update their policy, billing, and claims information at any time.</description>
+    <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
+    <masterLabel>Insurance Policy Holder Portal</masterLabel>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Asset_Detail</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Insurance_Policy_Related_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Billing</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Error</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Sfdc_Page</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Billing_Account_Detail</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Canvasapp_Page</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Asset_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Create_Record</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Search</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Billing_Account_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Asset_Related_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Insurance_Policy_Detail</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Related_Record_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Record_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Home</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Home</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Billing_Account_Related_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Record_Detail</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <pageSetting>
+        <page>Insurance_Policy_Holder_Portal_Insurance_Policy_List</page>
+        <themeLayout>Insurance_Policy_Holder_Portal_themeLayout_Default</themeLayout>
+    </pageSetting>
+    <publisher>Salesforce Industries</publisher>
+</CommunityTemplateDefinition>

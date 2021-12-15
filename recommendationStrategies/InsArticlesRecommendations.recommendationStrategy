@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>InsurancePolicy</contextRecordType>
+    <description>Recommendation display logic for Articles on Policyholder Portals.</description>
+    <if>
+        <childNode>Load_Auto_Quote_Offer</childNode>
+        <label>Doesn&apos;t Have Auto Policy</label>
+        <name>Doesn_t_Have_Auto_Policy</name>
+        <childNodeExpression>
+            <childName>Load_Auto_Quote_Offer</childName>
+            <expression>NOT(ISPICKVAL($Record.PolicyType, &apos;Auto&apos;))</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <if>
+        <childNode>Load_Homeowners_Offer</childNode>
+        <label>New Home</label>
+        <name>New_Home</name>
+        <childNodeExpression>
+            <childName>Load_Homeowners_Offer</childName>
+            <expression>NOT(ISPICKVAL($Record.PolicyType, &apos;Property&apos;)) &amp;&amp; NOT(ISPICKVAL($Record.PolicyType, &apos;Homeowners&apos;))</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>InsArticlesRecommendations</label>
+    <recommendationLoad>
+        <label>Load Art Seminar Offer</label>
+        <name>Load_Art_Seminar_Offer</name>
+        <condition>
+            <field>Name</field>
+            <operator>STARTS_WITH</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Art</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Load Auto Quote Offer</label>
+        <name>Load_Auto_Quote_Offer</name>
+        <condition>
+            <field>Name</field>
+            <operator>STARTS_WITH</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Auto</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <recommendationLoad>
+        <label>Load Homeowners Offer</label>
+        <name>Load_Homeowners_Offer</name>
+        <condition>
+            <field>Name</field>
+            <operator>STARTS_WITH</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Home</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <sort>
+        <childNode>Doesn_t_Have_Auto_Policy</childNode>
+        <childNode>Load_Art_Seminar_Offer</childNode>
+        <childNode>New_Home</childNode>
+        <label>Prioritize</label>
+        <name>Prioritize</name>
+        <limit>1</limit>
+        <field>
+            <name>Name</name>
+            <nullsFirst>false</nullsFirst>
+            <order>Asc</order>
+        </field>
+    </sort>
+    <union>
+        <childNode>Prioritize</childNode>
+        <label>Output</label>
+        <name>Output_40de9cdf58a04ebb863ffb24391d1221</name>
+    </union>
+</RecommendationStrategy>

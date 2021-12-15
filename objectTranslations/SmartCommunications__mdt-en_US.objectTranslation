@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SmartCommunications</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SmartCommunications</value>
+    </caseValues>
+    <fields>
+        <label><!-- Token Endpoint URL --></label>
+        <name>accessTokenUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consumer Key --></label>
+        <name>clientId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consumer Secret --></label>
+        <name>clientSecret__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send client credentials in header --></label>
+        <name>credsInHeader__c</name>
+    </fields>
+    <fields>
+        <label><!-- Password --></label>
+        <name>password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback URL --></label>
+        <name>redirectUri__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Scopes --></label>
+        <name>scope__c</name>
+    </fields>
+    <fields>
+        <label><!-- username --></label>
+        <name>username__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

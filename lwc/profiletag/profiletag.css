@@ -1,0 +1,10 @@
+/*profiletag.css*/
+.statusCard .slds-pill {
+  font-size: 14px;
+  background-color: #F4F6F9;
+  color: #9FABC0;
+  border: none;
+  line-height: 2.5;
+  height: 35px;
+  font-size: 13px;
+}

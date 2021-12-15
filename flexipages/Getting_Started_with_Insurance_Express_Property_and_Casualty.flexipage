@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b&gt;Welcome to the Insurance Express App 30-Day Free Trial:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Launch a Financial Services Cloud app&lt;/b&gt;​​&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Click the &lt;b&gt;App Launcher&lt;/b&gt;, and then click the &lt;b&gt;Vlocity Insurance&lt;/b&gt;, &lt;b&gt;Vlocity Administration,&lt;/b&gt; &lt;b&gt;Vlocity Service Console, Digital Broker Self-Service, or Digital Policyholder Self-Service&lt;/b&gt;&amp;nbsp;app.&amp;nbsp;Remember to check out &lt;b&gt;Ernie Newton&lt;/b&gt; profile using the Accounts tab or by searching in Global Search.&amp;nbsp;To return to these instructions, switch to the &lt;b&gt;Welcome&lt;/b&gt;&amp;nbsp;app.&lt;/li&gt;&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b&gt;Insurance Express Top Resources&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Embark on the OmniStudio Digital Engagement Suite Trail Today!&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://trailhead.salesforce.com/en/content/learn/trails/get-to-know-omnistudio&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(220, 161, 13);&quot;&gt;&lt;b&gt;&lt;u&gt;Get to Know OmniStudio&lt;/u&gt;&lt;/b&gt;&lt;/a&gt; - Get to know OmniStudio with a fun and interactive trail designed for OmniStudio admins. This trail is a guided learning path that charts your course through OmniStudio digital engagement suite. All that, and you also earn&amp;nbsp;many sweet Trailhead Badges when you complete the trail!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Documentation&amp;nbsp;Resources&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://docs.vlocity.com/en/-Insurance-Property---Casualty-Application-Suite-Overview-.html&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(220, 161, 13);&quot;&gt;&lt;b&gt;&lt;u&gt;User Guide&lt;/u&gt;&lt;/b&gt;&lt;/a&gt; - Learn what is offered in this Insurance Express App by going through this user guide.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Important Notes:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&amp;nbsp;1.&amp;nbsp;&lt;/b&gt;The trial leverages &lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.financial_services_cloud_admin_guide.meta/financial_services_cloud_admin_guide/fsc_admin_person_accounts.htm&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(220, 161, 13);&quot;&gt;&lt;u&gt;Person Accounts for Express Apps&lt;/u&gt;&lt;/a&gt;. Feature comparison between Person Accounts&amp;nbsp;and Individual&amp;nbsp;is available &lt;a href=&quot;https://developer.salesforce.com/docs/atlas.en-us.financial_services_cloud_admin_guide.meta/financial_services_cloud_admin_guide/fsc_admin_pers_impl_consid.htm&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(220, 161, 13);&quot;&gt;&lt;u&gt;here&lt;/u&gt;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;2. Not all ISV packages are compatible with both Individual and Person Accounts. Please evaluate which object model is right for your needs before proceeding.&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Getting Started with Insurance Express - Property and Casualty</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

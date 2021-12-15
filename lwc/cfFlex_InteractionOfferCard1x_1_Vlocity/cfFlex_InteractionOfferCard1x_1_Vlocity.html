@@ -1,0 +1,102 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative">
+            <div if:false={cardLoaded} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: white; z-index: 99;">
+  <div>
+   <vlocity_ins-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></vlocity_ins-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <vlocity_ins-flex-card-state key={record.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-media slds-media_center slds-has-flexi-truncate slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-around_small " style="background-color:#FFFFFF;     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+    border-radius:4px;     ">
+          <div class="slds-col   slds-p-around_x-small slds-size_12-of-12 " style="">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-media__body  slds-size_11-of-12  " style="             ">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col  slds-m-bottom_small slds-text-heading_medium slds-size_12-of-12  " style="     : #ccc 1px solid; 
+         font-weight:500"><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3E%7Bresource.Name%7D%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div><div class="slds-col  slds-text-body_medium slds-size_12-of-12  " style="     : #ccc 1px solid; 
+         max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;"><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3E%7Bresource.vlocity_ins__Description__c%7D%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div><div class="slds-col    slds-size_12-of-12  " style="             ">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col  slds-p-top_x-small slds-action_text slds-size_12-of-12  " style="     : #ccc 1px solid; 
+      min-height:30px; max-height:30px; color:#459df2; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   state-obj={record}  record={record}  card={card}  context-id=""  is-tracking-disabled="false"  s-object-type=""  state-action='\{"displayName":"New Opportunity","hasExtraParams":false,"id":"flex-action-1617785433810","name":"{info.Name}","openUrlIn":"New Tab/Window","type":"Vlocity Action","vlocityIcon":"action-new_opportunity"}'  theme="slds" ></vlocity_ins-action>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-size_12-of-12 " style=""><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   state-obj={record}  record={record}  card={card}  context-id="\{accountId}"  state-action='\{"displayName":"Life protection","fetchFromDS":true,"id":"flex-action-1599056203088","name":"{vlocity_ins__TargetObjectKey__c}","openUrlIn":"New Tab/Window","type":"Vlocity Action","vlocityIcon":"icon-v-campaign"}'  theme="slds" ></vlocity_ins-action>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col    slds-size_1-of-12  " style="             margin:auto 0;">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_12-of-12  " style="             "><vlocity_ins-flex-img   card={card}  record={record}  extraclass="slds-align_absolute-center"  img-height=""  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/servlet/servlet.FileDownload?file={attachment.opportunity}","title":""}'  theme="slds"  ></vlocity_ins-flex-img>
+      </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div>
+      </vlocity_ins-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <vlocity_ins-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-media slds-media_center slds-has-flexi-truncate slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-around_small " style="background-color:#FFFFFF;     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+    border-radius:4px;     ">
+          <div class="slds-col   slds-p-around_x-small slds-size_12-of-12 " style="">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-media__body  slds-size_11-of-12  " style="             ">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col  slds-m-bottom_small slds-text-heading_medium slds-size_12-of-12  " style="     : #ccc 1px solid; 
+         font-weight:500"><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3E%7Bresource.Name%7D%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div><div class="slds-col  slds-text-body_medium slds-size_12-of-12  " style="     : #ccc 1px solid; 
+         max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;"><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3E%7Bresource.vlocity_ins__Description__c%7D%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div><div class="slds-col    slds-size_12-of-12  " style="             ">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col  slds-p-top_x-small slds-action_text slds-size_12-of-12  " style="     : #ccc 1px solid; 
+      min-height:30px; max-height:30px; color:#459df2; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   state-obj={record}  record={record}  card={card}  context-id=""  is-tracking-disabled="false"  s-object-type=""  state-action='\{"displayName":"New Opportunity","hasExtraParams":false,"id":"flex-action-1617785433810","name":"{info.Name}","openUrlIn":"New Tab/Window","type":"Vlocity Action","vlocityIcon":"action-new_opportunity"}'  theme="slds" ></vlocity_ins-action>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-size_12-of-12 " style=""><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   state-obj={record}  record={record}  card={card}  context-id="\{accountId}"  state-action='\{"displayName":"Life protection","fetchFromDS":true,"id":"flex-action-1599056203088","name":"{vlocity_ins__TargetObjectKey__c}","openUrlIn":"New Tab/Window","type":"Vlocity Action","vlocityIcon":"icon-v-campaign"}'  theme="slds" ></vlocity_ins-action>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col    slds-size_1-of-12  " style="             margin:auto 0;">
+    <vlocity_ins-block  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds" ><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_12-of-12  " style="             "><vlocity_ins-flex-img   card={card}  record={record}  extraclass="slds-align_absolute-center"  img-height=""  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/servlet/servlet.FileDownload?file={attachment.opportunity}","title":""}'  theme="slds"  ></vlocity_ins-flex-img>
+      </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div>
+      </vlocity_ins-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <vlocity_ins-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onsetvalue={updateAction}>
+      
+      </vlocity_ins-action>
+  
+            <vlocity_ins-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onsetvalue={updateAction}>
+            
+            </vlocity_ins-action>
+            </div>
+          </template>

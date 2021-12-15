@@ -1,0 +1,56 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative">
+            <div if:false={cardLoaded} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: white; z-index: 99;">
+  <div>
+   <vlocity_ins-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></vlocity_ins-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <vlocity_ins-flex-card-state key={record.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-p-around_x-small slds-communities-policy-card  slds-color__text_gray-11 slds-p-around_x-small slds-m-bottom_x-small" style="background-color:#FFFFFF;             ">
+          <div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  is-tracking-disabled="true"  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Bill SetUp","id":"flex-action-1607335813048","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1wEAK","Name":"ins/SetUpBills/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vForcewithNsPrefix":"vlocity_ins__OmniScriptUniversalPage","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Generate Statement","id":"flex-action-1607335773603","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1xEAK","Name":"ins/createStatement/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Dunning","id":"flex-action-1607335817982","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1yEAK","Name":"ins/dunning/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Make a Payment","id":"flex-action-1607335867628","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1zEAK","Name":"ins/PolicyPayment/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"AutoPay","id":"flex-action-1607335895953","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP20EA0","Name":"ins/ProcessAutoPay/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div>
+        </div>
+      </vlocity_ins-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <vlocity_ins-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-p-around_x-small slds-communities-policy-card  slds-color__text_gray-11 slds-p-around_x-small slds-m-bottom_x-small" style="background-color:#FFFFFF;             ">
+          <div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  is-tracking-disabled="true"  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Bill SetUp","id":"flex-action-1607335813048","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1wEAK","Name":"ins/SetUpBills/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vForcewithNsPrefix":"vlocity_ins__OmniScriptUniversalPage","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Generate Statement","id":"flex-action-1607335773603","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1xEAK","Name":"ins/createStatement/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Dunning","id":"flex-action-1607335817982","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1yEAK","Name":"ins/dunning/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"Make a Payment","id":"flex-action-1607335867628","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1zEAK","Name":"ins/PolicyPayment/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div><div class="slds-col  slds-text-heading_x-small slds-text-link slds-m-bottom--x-small slds-p-horizontal_small slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " style="            color:#000000; "><vlocity_ins-action  tracking-obj={_childCardTrackingObj}   card={card}  re-render-flyout="true"  record={record}  state-action='\{"displayName":"AutoPay","id":"flex-action-1607335895953","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP20EA0","Name":"ins/ProcessAutoPay/English","isLwcOs":true},"openUrlIn":"New Tab/Window","type":"OmniScript","vlocityIcon":"icon-v-view"}'  state-obj={record}  styles='\{"label":{"color":"","fontSize":""}}'  theme="slds" ></vlocity_ins-action>
+      </div>
+        </div>
+      </vlocity_ins-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <vlocity_ins-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onsetvalue={updateAction}>
+      
+      </vlocity_ins-action>
+  
+            <vlocity_ins-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onsetvalue={updateAction}>
+            
+            </vlocity_ins-action>
+            </div>
+          </template>

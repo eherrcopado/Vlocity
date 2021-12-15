@@ -1,0 +1,39 @@
+<template>
+	<section class="VPL_Select-vehicle nds-size--12-of-12">
+		<article>
+			<div class="nds-card__header nds-grid">
+				<div class="nds-media__body nds-col">
+					<h2 class="nds-card__header-title nds-grid">
+						<div class="nds-col slds-size_1-of-2">
+							<span class="nds-text-heading_small">Name</span>
+						</div>
+						<div class="nds-col slds-size_1-of-2">
+							<span class="nds-text-heading_small nds-text-color_weak">Type</span>
+						</div>
+					</h2>
+				</div>
+			</div>
+		</article>
+		<article class="nds-card" for:each={scheduledItemRecord} for:item="field" for:index="index"
+			key={field.InsuredItemId}>
+			<div class="nds-card__header nds-grid" data-id={field.InsuredItemId} onclick={selectRecords}>
+				<div class="selectedItemIcon">
+					<vlocity_ins-icon style={getSvgStyle} icon-name="utility:check" size="x-small" theme="nds"
+						color="#fff" extraclass="selectedIcon"></vlocity_ins-icon>
+				</div>
+				<div class="nds-media__body nds-col">
+					<h2 class="nds-card__header-title nds-grid">
+						<div class="nds-col slds-size_1-of-2">
+							<span class="nds-text-heading_small">{field.InstanceKey}</span>
+
+						</div>
+						<div class="nds-col slds-size_1-of-2">
+
+							<span class="nds-text-heading_small nds-text-color_weak">{field.Type}</span>
+						</div>
+					</h2>
+				</div>
+			</div>
+		</article>
+	</section>
+</template>

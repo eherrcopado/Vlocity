@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_54591760</developerName>
+        <masterLabel>Claim Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>vlocity_ins__InsuranceClaim__c.vlocity_ins__PrimaryPolicyAssetId__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>vlocity_ins__InsuranceClaim__c.vlocity_ins__PrimaryPolicyAssetId__c</field>
+    </columns>
+    <columns>
+        <field>vlocity_ins__InsuranceClaim__c.vlocity_ins__PrimaryOwnerName__c</field>
+    </columns>
+    <description>This report is used in dashboard to show claim settled and average settlementtile</description>
+    <filter>
+        <criteriaItems>
+            <column>vlocity_ins__InsuranceClaim__c.vlocity_ins__PrimaryPolicyAssetId__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>vlocity_ins__InsuranceClaim__c.vlocity_ins__ClaimStatus__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>vlocity_ins__InsuranceClaim__c.Inspection_Complete_SLA_Days__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_54591760</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Claims Settled - Closed Claims</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$vlocity_ins__InsuranceClaim__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>vlocity_ins__InsuranceClaim__c.Adjuster_Assigned__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

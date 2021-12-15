@@ -1,0 +1,15 @@
+<template>
+     <div class="slds-size--1-of-1">
+          <ul if:true={profileTags} class="statusCard slds-size--1-of-1 slds-p-vertical_small">
+            <template for:each={profileTags} for:item="item">
+              <span key={item.id} class={item.class} data-color={item.colorC}>
+                <li class="slds-pill slds-p-around_x-small slds-m-right_x-small slds-m-vertical_x-small">
+                  <vlocity_ins-pill value={item.content} icon-url={iconUrl} theme="slds" name="statusPill" viewonly="true"
+                    tag-extraclass="slds-p-around_none slds-m-around_none">
+                  </vlocity_ins-pill>
+                </li>
+              </span>
+            </template>
+          </ul>
+        </div>
+</template>

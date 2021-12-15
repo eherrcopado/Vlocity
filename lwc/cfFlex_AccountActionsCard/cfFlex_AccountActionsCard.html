@@ -1,0 +1,148 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative">
+            <div if:false={cardLoaded} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: white; z-index: 99;">
+  <div>
+   <vlocity_ins-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></vlocity_ins-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <vlocity_ins-flex-card-state key={record.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-p-around_small " style="background-color:#fff;     : #ccc 1px solid; 
+         ">
+          <div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small slds-m-bottom_small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121388973","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BWAAC","Name":"auto/Quote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Auto Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index0"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:travel_and_places"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EAuto%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small slds-m-bottom_small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121398246","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BXAAS","Name":"property/HomeQuote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Home Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index1"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:home"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EHome%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small slds-m-bottom_small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121403439","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BYAAS","Name":"watercraft/multiVesselQuote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Watercraft Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index2"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:flow"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EWatercraft%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620214467573","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1vEAS","Name":"ins/createQuoteAndOpportuntiy/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Create Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index3"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:quote"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3ECreate%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div>
+      </vlocity_ins-flex-card-state><vlocity_ins-flex-card-state key={record.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="1" data-rindex={rindex} class="cf-vlocity-state-1 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-p-around_small " style="background-color:#fff;     : #ccc 1px solid; 
+         ">
+          <div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121416439","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BZAAC","Name":"bop/Quote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Business Owners Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index8"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:company"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EBusiness%20Owners%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div>
+      </vlocity_ins-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <vlocity_ins-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-p-around_small " style="background-color:#fff;     : #ccc 1px solid; 
+         ">
+          <div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small slds-m-bottom_small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121388973","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BWAAC","Name":"auto/Quote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Auto Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index4"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:travel_and_places"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EAuto%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small slds-m-bottom_small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121398246","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BXAAS","Name":"property/HomeQuote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Home Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index5"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:home"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EHome%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small slds-m-bottom_small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121403439","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BYAAS","Name":"watercraft/multiVesselQuote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Watercraft Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index6"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:flow"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EWatercraft%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div><div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620214467573","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a3F5f000000vP1vEAS","Name":"ins/createQuoteAndOpportuntiy/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Create Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index7"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:quote"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3ECreate%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div>
+      </vlocity_ins-flex-card-state><vlocity_ins-flex-card-state  record={record} data-statue="false"  data-index="1" data-rindex={rindex} class="cf-vlocity-state-1 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-p-around_small " style="background-color:#fff;     : #ccc 1px solid; 
+         ">
+          <div class="slds-col   slds-text-link_reset  slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_xx-small  slds-size_12-of-12  " style="     border-top: #c9c9c9 1px solid;border-right: #c9c9c9 1px solid;border-bottom: #c9c9c9 1px solid;border-left: #c9c9c9 1px solid; 
+        color:#000000; ">
+    <vlocity_ins-block  record={record}  card={card}  action='\{"actionData":{"card":"{card}","stateAction":{"displayName":"Action","id":"flex-action-1620121416439","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"a065f00000432BZAAC","Name":"bop/Quote/English","isLwcOs":true},"openUrlIn":"New Tab/Window","tabIcon":"","tabLabel":"Business Owners Quote","type":"OmniScript","vlocityIcon":"standard-default"},"stateObj":"{record}"},"eventType":"onclick","iconName":"standard-default","label":"Action","name":""}'  collapsed-by-default="false"  collapsible="false"  label="Block"  extraclass=" slds-text-link_reset"  theme="slds" onclick={executeAction} data-action-index="index9"><div class="slds-grid slds-wrap">
+          <div class="slds-col   slds-size_1-of-12  " style="     : #ccc 1px solid; 
+         "><vlocity_ins-flex-icon     record={record}  color="#0176D3"  extraclass="slds-icon slds-m-around_xx-small"  icon-name="utility:company"  icon-type="Salesforce SVG"  imgsrc=""  size="medium"  variant="default"  theme="slds"  ></vlocity_ins-flex-icon>
+      </div><div class="slds-col  slds-p-around_x-small slds-text-heading_small slds-size_11-of-12  " style="     : #ccc 1px solid; 
+        color:#000; "><vlocity_ins-output-field     record={record}  card={card}  merge-field="%3Cdiv%3EBusiness%20Owners%20Quote%3C/div%3E"  theme="slds"  ></vlocity_ins-output-field>
+      </div>
+        </div></vlocity_ins-block>
+    </div>
+        </div>
+      </vlocity_ins-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <vlocity_ins-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onsetvalue={updateAction}>
+      
+      </vlocity_ins-action>
+  
+            <vlocity_ins-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onsetvalue={updateAction}>
+            
+            </vlocity_ins-action>
+            </div>
+          </template>

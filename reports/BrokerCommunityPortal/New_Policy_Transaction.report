@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_84733390</developerName>
+        <masterLabel>Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Asset.vlocity_ins__AssetTransactions__r$vlocity_ins__Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Premium Paid</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Billing Notice</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Surrender</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lapse</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Changed/Endorsed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sold Policy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Reinstatement</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Initiate Grace Period</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Endorsement Charge</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Premium Charge</sourceValue>
+            </sourceValues>
+            <value>New</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Renewal</sourceValue>
+            </sourceValues>
+            <value>Renewed</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Asset$Account</field>
+    </columns>
+    <columns>
+        <field>Asset$Name</field>
+    </columns>
+    <columns>
+        <field>Asset$SerialNumber</field>
+    </columns>
+    <columns>
+        <field>Asset.vlocity_ins__AssetTransactions__r$vlocity_ins__Type__c</field>
+    </columns>
+    <columns>
+        <field>Asset$Product2.ProductCode</field>
+    </columns>
+    <columns>
+        <field>Asset.vlocity_ins__AssetTransactions__r$vlocity_ins__TransactionDate__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Asset$vlocity_ins__TotalPremiumForTerm__c</field>
+    </columns>
+    <description>This report is used in dashboard to show Policy monthly Sales and Renewals</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_84733390</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Asset$vlocity_ins__EffectiveDate__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Monthly Sales and Renewal</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Policy_Transaction_by_Period__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Asset$vlocity_ins__ApplicationSubmitDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>InsurancePolicy$PolicyName</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$Name</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$SourceQuote</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$NameInsured</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$vlocity_ins_fsc__ProductCode__c</field>
+    </columns>
+    <columns>
+        <field>InsurancePolicy$EffectiveDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>InsurancePolicy$TotalStandardAmount</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>InsurancePolicy$Producer</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Premium Collected by Producer</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Insurance_Policy_Reports__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>InsurancePolicy$EffectiveDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>
