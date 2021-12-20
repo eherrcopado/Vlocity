@@ -1,0 +1,27 @@
+{
+    "%vlocity_namespace%__Author__c": "Vlocity",
+    "%vlocity_namespace%__Datasource__c": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "0016A000009BFpeQAG"
+            }
+        ],
+        "type": "Query",
+        "value": {
+            "body": "{}",
+            "query": "SELECT \n%vlocity_namespace%__PrimaryProducerId__r.Name,\nAsset.Account.Name,\nAsset.Contact.Name,\nAccountId, \nContactId, \nDescription, \nId, \nInstallDate, \nLastModifiedDate, \nName, \nParentId, \nPrice, \nProduct2Id, \nPurchaseDate, \nQuantity, \nRecordTypeId, \nRootAssetId, \nStatus, \nUsageEndDate, \n%vlocity_namespace%__AmountAvailableForWithdrawal__c, \n%vlocity_namespace%__AnnualPremium__c, \n%vlocity_namespace%__ApplicationSubmitDate__c, \n%vlocity_namespace%__AssetReferenceId__c, \n%vlocity_namespace%__AutomaticPaymentAmount__c, \n%vlocity_namespace%__AutomaticRebalancing__c, \n%vlocity_namespace%__BenefitPlanId__c, \n%vlocity_namespace%__BillDeliveryMethod__c, \n%vlocity_namespace%__BillingAccountId__c, \n%vlocity_namespace%__BillingCity__c, \n%vlocity_namespace%__BillingContactId__c, \n%vlocity_namespace%__BillingCountry__c, \n%vlocity_namespace%__BillingEmail__c, \n%vlocity_namespace%__BillingFrequency__c, \n%vlocity_namespace%__BillingMethod__c, \n%vlocity_namespace%__BillingPostalCode__c, \n%vlocity_namespace%__BillingState__c, \n%vlocity_namespace%__BillingStreet__c, \n%vlocity_namespace%__CarrierId__c, \n%vlocity_namespace%__CashSurrenderValue__c, \n%vlocity_namespace%__CashValue__c, \n%vlocity_namespace%__CostBasis__c, \n%vlocity_namespace%__DaysToExpire__c, \n%vlocity_namespace%__DeathBenefit__c, \n%vlocity_namespace%__EffectiveDate__c, \n%vlocity_namespace%__EffectiveTerm__c, \n%vlocity_namespace%__ExpirationDate__c, \n%vlocity_namespace%__FaceAmount__c, \n%vlocity_namespace%__GuaranteedDeathBenefit__c, \n%vlocity_namespace%__GuaranteePeriod__c, \n%vlocity_namespace%__InceptionDate__c, \n%vlocity_namespace%__InitialDeposit__c, \n%vlocity_namespace%__IsAutomaticPaymentEnabled__c, \n%vlocity_namespace%__JSONAttribute__c, \n%vlocity_namespace%__Jurisdiction__c, \n%vlocity_namespace%__LineofBusiness__c, \n%vlocity_namespace%__OpenClaimCount__c, \n%vlocity_namespace%__ParentItemId__c, \n%vlocity_namespace%__PaymentMethodId__c, \n%vlocity_namespace%__PolicyAssetId__c, \n%vlocity_namespace%__PrimaryProducerId__c, \n%vlocity_namespace%__ProvisioningStatus__c, \n%vlocity_namespace%__QualifiedType__c, \n%vlocity_namespace%__RatePlan__c, \n%vlocity_namespace%__RateState__c, \n%vlocity_namespace%__RootItemId__c, \n%vlocity_namespace%__SourceOfFunds__c, \n%vlocity_namespace%__Term__c, \n%vlocity_namespace%__TotalPremiumForTerm__c, \n%vlocity_namespace%__TotalValue__c, \n%vlocity_namespace%__Type__c, \n%vlocity_namespace%__UnitofFaceAmount__c, \n%vlocity_namespace%__ValuePerUnit__c \nFROM Asset  where  AccountId =  '{{params.id}}'"
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "Account-PolicyAssets-lwc.json",
+    "%vlocity_namespace%__Description__c": "Account PolicyAssets Personal Lines, Life and Annuity Layout",
+    "%vlocity_namespace%__GlobalKey__c": "Account-PolicyAssets-lwc/1/VEX Personal Lines/1585099713802",
+    "%vlocity_namespace%__ParentID__c": "",
+    "%vlocity_namespace%__RequiredPermission__c": "",
+    "%vlocity_namespace%__Type__c": "Layout",
+    "%vlocity_namespace%__Version__c": 1,
+    "Name": "Account-PolicyAssets-lwc",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityUILayout__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityUILayout__c/Account-PolicyAssets-lwc"
+}
