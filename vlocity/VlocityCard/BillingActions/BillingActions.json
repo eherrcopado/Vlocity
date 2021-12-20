@@ -1,0 +1,215 @@
+{
+    "GlobalKey__c": "BillingActions/vlocityDev/1/1582887056099",
+    "dataSource": {
+        "type": null
+    },
+    "enableLwc": true,
+    "filter": {
+        "['Type']": "Auto"
+    },
+    "states": [
+        {
+            "actionCtxId": "['Id']",
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                                {
+                                    "field": "['Type']",
+                                    "operator": "==",
+                                    "type": "custom",
+                                    "value": "Auto"
+                                }
+                            ]
+                        },
+                        "disableAddCondition": false,
+                        "displayName": "Bill SetUp",
+                        "extraParams": {
+                            "c__ContextId": "['Id']"
+                        },
+                        "filter": "$scope.obj['Type'] == 'Auto'",
+                        "hasExtraParams": true,
+                        "id": "SetUpBill",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000TtY9EAK",
+                            "Language": "English",
+                            "Name": "ins/SetUpBills/English",
+                            "SubType": "SetUpBills",
+                            "Type": "ins",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-minus-line"
+                    },
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                                {
+                                    "field": "['Type']",
+                                    "operator": "==",
+                                    "type": "custom",
+                                    "value": "Auto"
+                                }
+                            ]
+                        },
+                        "disableAddCondition": false,
+                        "displayName": "Generate Statement",
+                        "extraParams": {
+                            "c__ContextId": "['Id']"
+                        },
+                        "filter": "$scope.obj['Type'] == 'Auto'",
+                        "hasExtraParams": true,
+                        "id": "generateStatement",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F6g000000hWEEEA2",
+                            "Language": "English",
+                            "Name": "ins/createStatement/English",
+                            "SubType": "createStatement",
+                            "Type": "ins",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-minus-line"
+                    },
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                            ]
+                        },
+                        "displayName": "Dunning",
+                        "extraParams": {
+                            "c__ContextId": "['Id']"
+                        },
+                        "hasExtraParams": true,
+                        "id": "Dunning",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000TtXzEAK",
+                            "Language": "English",
+                            "Name": "ins/dunning/English",
+                            "SubType": "dunning",
+                            "Type": "ins",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-close"
+                    },
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                            ]
+                        },
+                        "displayName": "Make a Payment",
+                        "extraParams": {
+                            "c__ContextId": "['Id']"
+                        },
+                        "hasExtraParams": true,
+                        "id": "Payment",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000TtVjEAK",
+                            "Language": "English",
+                            "Name": "ins/PolicyPayment/English",
+                            "SubType": "PolicyPayment",
+                            "Type": "ins",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-close"
+                    },
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                            ]
+                        },
+                        "displayName": "AutoPay",
+                        "extraParams": {
+                            "c__ContextId": "['Id']"
+                        },
+                        "hasExtraParams": true,
+                        "id": "autoPay",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000TtjfEAC",
+                            "Language": "English",
+                            "Name": "ins/ProcessAutoPay/English",
+                            "SubType": "ProcessAutoPay",
+                            "Type": "ins",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-minus-line"
+                    }
+                ]
+            },
+            "disableAddCondition": false,
+            "fields": [
+            ],
+            "filter": "$scope.data.status === 'active'",
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "actionGridState",
+                "Id": "0Rb3i000000by24CAA",
+                "MasterLabel": "actionGridState",
+                "NamespacePrefix": "%vlocity_namespace%",
+                "name": "actionGridState"
+            },
+            "name": "open-actions",
+            "sObjectType": "Asset",
+            "smartAction": {
+            },
+            "templateUrl": "action-grid-card-slds"
+        }
+    ],
+    "title": "Billing Actions"
+}

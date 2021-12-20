@@ -1,0 +1,151 @@
+{
+    "GlobalKey__c": "Policy-Horiz-Disability-lwc/VEX Personal Lines/1/1585101296647",
+    "dataSource": {
+        "type": null
+    },
+    "enableLwc": true,
+    "filter": {
+        "['%vlocity_namespace%__Type__c']": "Disability"
+    },
+    "icon": "custom86",
+    "sessionVars": [
+        {
+            "name": "show3x",
+            "val": "true"
+        }
+    ],
+    "sprite": "custom",
+    "states": [
+        {
+            "actionCtxId": "['Id']",
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actionCtxId": "['Id']",
+                "actions": [
+                    {
+                        "collapse": true,
+                        "displayName": "View",
+                        "hasExtraParams": false,
+                        "iconName": "icon-v-view",
+                        "id": "np-view-policy-detail",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "VPL-policy-inquiry",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "VPL-policy-pay-premium",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "VPL-policy-surrender",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "VPL-policy-claim",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    }
+                ],
+                "sObjectType": "Asset"
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "editing": false,
+                    "fieldType": "standard",
+                    "label": "",
+                    "name": "['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__Type__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Type",
+                    "name": "['%vlocity_namespace%__Type__c']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['Account']['Name']",
+                    "group": "Custom Properties",
+                    "label": "Account Name",
+                    "name": "['Account']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__PrimaryProducerId__r']['Name']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Producer",
+                    "name": "['%vlocity_namespace%__PrimaryProducerId__r']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__AnnualPremium__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Annual Premium",
+                    "name": "['%vlocity_namespace%__AnnualPremium__c']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['EliminationPeriod__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Elimination Period",
+                    "name": "['EliminationPeriod__c']",
+                    "type": "string"
+                }
+            ],
+            "flyout": {
+                "layout": null
+            },
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "cardHorizActiveLwc",
+                "Id": "0Rb3i000000bwqWCAQ",
+                "MasterLabel": "cardHorizActiveLwc",
+                "name": "cardHorizActiveLwc"
+            },
+            "name": "Disability",
+            "sObjectType": "Asset",
+            "smartAction": {
+            },
+            "templateUrl": "card-horiz-noActions-slds"
+        }
+    ],
+    "title": "Disability"
+}
