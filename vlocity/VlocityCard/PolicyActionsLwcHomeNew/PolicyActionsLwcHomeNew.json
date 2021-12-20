@@ -1,0 +1,141 @@
+{
+    "GlobalKey__c": "PolicyActionsLwcHomeNew/Vlocity Express/1/1602505735138",
+    "dataSource": {
+        "type": null
+    },
+    "enableLwc": true,
+    "filter": {
+        "['Type']": "Property"
+    },
+    "states": [
+        {
+            "actionCtxId": "['Id']",
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                            ]
+                        },
+                        "displayName": "File Claim",
+                        "extraParams": {
+                            "c__ContextId": "['Id']"
+                        },
+                        "hasExtraParams": true,
+                        "id": "File Cliam",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "newport",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F4W000003asOUUAY",
+                            "Language": "English",
+                            "Name": "lwcproperty/FNOL/English",
+                            "SubType": "FNOL",
+                            "Type": "lwcproperty",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-edit2"
+                    },
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                                {
+                                    "field": "['showConditionalActions']",
+                                    "operator": "==",
+                                    "type": "custom",
+                                    "value": "showA"
+                                }
+                            ]
+                        },
+                        "disableAddCondition": false,
+                        "displayName": "Modify Policy",
+                        "eventName": "policy_action",
+                        "extraParams": {
+                            "recordId": "['Id']"
+                        },
+                        "filter": "$scope.obj['showConditionalActions'] == 'showA'",
+                        "hasExtraParams": true,
+                        "id": "PubSub Action",
+                        "isCustomAction": true,
+                        "message": "modifyPolicy",
+                        "type": "PubSub",
+                        "vlocityIcon": "utility:edit"
+                    },
+                    {
+                        "ContextId": "['Id']",
+                        "collapse": false,
+                        "conditions": {
+                            "group": [
+                                {
+                                    "field": "['showConditionalActions']",
+                                    "operator": "==",
+                                    "type": "custom",
+                                    "value": "showA"
+                                }
+                            ]
+                        },
+                        "disableAddCondition": false,
+                        "displayName": "Cancel Policy",
+                        "filter": "$scope.obj['showConditionalActions'] == 'showA'",
+                        "hasExtraParams": true,
+                        "id": "Cancel Policy",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "newport",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000Tt1REAS",
+                            "Language": "English",
+                            "Name": "ins/PolicyCancellation/English",
+                            "SubType": "PolicyCancellation",
+                            "Type": "ins",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "_self",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-close"
+                    }
+                ]
+            },
+            "disableAddCondition": false,
+            "fields": [
+            ],
+            "filter": "$scope.data.status === 'active'",
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "actionGridState",
+                "Id": "0Rb3i000000by24CAA",
+                "MasterLabel": "actionGridState",
+                "NamespacePrefix": "%vlocity_namespace%",
+                "name": "actionGridState"
+            },
+            "name": "open-actions",
+            "sObjectType": "Asset",
+            "smartAction": {
+            },
+            "templateUrl": "action-grid-card-slds"
+        }
+    ],
+    "title": "Actions"
+}

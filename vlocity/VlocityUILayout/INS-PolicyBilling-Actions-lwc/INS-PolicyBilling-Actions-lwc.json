@@ -1,0 +1,40 @@
+{
+    "Cards": [
+        "BillingActions"
+    ],
+    "GlobalKey__c": "INS-PolicyBilling-Actions-lwc/1/vlocityDev/1582886984482",
+    "componentName": "cfINSPolicyBillingActionsLwc",
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "02i3i000000ggd1AAA"
+            }
+        ],
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "port_ReadPolicyDetail_Card",
+            "inputMap": {
+                "Id": "{{params.id}}"
+            },
+            "jsonMap": "{\"params.id || params.Id\":\"{{params.id || params.Id}}\"}"
+        }
+    },
+    "enableLwc": true,
+    "lwc": {
+        "DeveloperName": "cardCanvas1x",
+        "Id": "0Rb3i000000bte8CAA",
+        "MasterLabel": "cardCanvas1x",
+        "name": "cardCanvas1x"
+    },
+    "previewType": "runTime",
+    "repeatCards": false,
+    "templates": {
+        "0": {
+            "templateUrl": "card-canvas-1x-simple-slds"
+        }
+    },
+    "workspace": [
+        "BillingActions/vlocityDev/1/1582887056099"
+    ]
+}

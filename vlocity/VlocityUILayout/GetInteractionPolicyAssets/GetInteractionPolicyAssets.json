@@ -1,0 +1,73 @@
+{
+    "Cards": [
+        "account-alert",
+        "Business Owners Cards",
+        "Auto Card",
+        "Boatowners Card",
+        "Homeowners Card",
+        "Renters Card",
+        "Scheduled Personal Property Cards",
+        "Pet Policy Card",
+        "Term Life Card",
+        "Disability Policy Card",
+        "Permanent Life Card",
+        "Open Term Life Card",
+        "Annuity Card",
+        "Open Business Owners Card",
+        "Open Auto Card",
+        "Open Renters Card",
+        "Open Watercraft Card",
+        "Open Pet Policy Card"
+    ],
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "a1J4P00000QjIHvUAN"
+            }
+        ],
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "cnsl_ExtractInteractionTopics_Card",
+            "ctxId": "",
+            "inputMap": {
+                "Id": "{{params.id}}",
+                "interactionId": "{{params.id}}"
+            },
+            "optionsMap": {
+                "vlcClass": "GetInteractionPolicies"
+            },
+            "remoteClass": "GetInteractionPolicies",
+            "remoteMethod": "getInteractionPolicies",
+            "remoteNSPrefix": null,
+            "resultVar": ""
+        }
+    },
+    "previewType": "runTime",
+    "templates": {
+        "0": {
+            "templateUrl": "card-canvas-3x-slds-NotificationBanner"
+        }
+    },
+    "workspace": [
+        "account-alert/vlocityDev/1/1563790971241",
+        "Business Owners Cards/vlocityDev/1/1563791070783",
+        "Auto Card/vlocityDev/1/1563791178439",
+        "Boatowners Card/vlocityDev/1/1563791255476",
+        "Homeowners Card/vlocityDev/1/1563791358319",
+        "Renters Card/vlocityDev/1/1563791378200",
+        "Scheduled Personal Property Cards/vlocityDev/1/1563791411868",
+        "Watercraft Card/vlocityDev/1/1563791456971",
+        "Pet Policy Card/vlocityDev/1/1563791483417",
+        "Term Life Card/vlocityDev/1/1563791507896",
+        "Disability Policy Card/vlocityDev/1/1563791557086",
+        "Permanent Life Card/vlocityDev/1/1563791582800",
+        "Open Term Life Card/vlocityDev/1/1563791619096",
+        "Annuity Card/vlocityDev/1/1563791638731",
+        "Open Business Owners Card/vlocityDev/1/1563791673142",
+        "Open Auto Card/vlocityDev/1/1563791692901",
+        "Open Renters Card/vlocityDev/1/1563791721369",
+        "Open Watercraft Card/vlocityDev/1/1563791753132",
+        "Open Pet Policy Card/vlocityDev/1/1563791772158"
+    ]
+}

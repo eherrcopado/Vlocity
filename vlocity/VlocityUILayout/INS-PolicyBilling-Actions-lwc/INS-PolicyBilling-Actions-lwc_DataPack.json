@@ -1,0 +1,26 @@
+{
+    "%vlocity_namespace%__Author__c": "Vlocity",
+    "%vlocity_namespace%__Datasource__c": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "02i6A0000009THNQA2"
+            }
+        ],
+        "type": "Query",
+        "value": {
+            "query": "SELECT Id, Name, RecordType.Name FROM Asset WHERE Id = '{{params.id || params.Id}}'"
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "INS-PolicyBilling-Actions-lwc.json",
+    "%vlocity_namespace%__Description__c": "",
+    "%vlocity_namespace%__GlobalKey__c": "INS-PolicyBilling-Actions-lwc/1/vlocityDev/1582886984482",
+    "%vlocity_namespace%__ParentID__c": "",
+    "%vlocity_namespace%__RequiredPermission__c": "",
+    "%vlocity_namespace%__Type__c": "Layout",
+    "%vlocity_namespace%__Version__c": 1,
+    "Name": "INS-PolicyBilling-Actions-lwc",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityUILayout__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityUILayout__c/INS-PolicyBilling-Actions-lwc"
+}
