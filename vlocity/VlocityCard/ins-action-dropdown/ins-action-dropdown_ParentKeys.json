@@ -1,4 +1,5 @@
 [
     "VlocityAction/AcceptQuote",
-    "VlocityAction/Edit Record"
+    "VlocityAction/Edit Record",
+    "VlocityUITemplate/ins-action-dropdown"
 ]
