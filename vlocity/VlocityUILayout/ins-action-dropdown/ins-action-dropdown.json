@@ -2,6 +2,7 @@
     "Cards": [
         "ins-action-dropdown"
     ],
+    "componentName": "cfInsActionDropdown",
     "dataSource": {
         "type": "Custom",
         "value": {
@@ -9,9 +10,13 @@
             "resultVar": ""
         }
     },
+    "previewType": "runTime",
     "templates": {
         "0": {
             "templateUrl": "ins-action-dropdown-container"
         }
-    }
+    },
+    "workspace": [
+        "ins-action-dropdown/Vlocity/null/1605629737536"
+    ]
 }
