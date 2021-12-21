@@ -6,7 +6,7 @@
     "dataSource": {
         "type": "Custom",
         "value": {
-            "body": "{\"totalSize\" : 1}",
+            "body": "{\"totalSize\" : 3}",
             "resultVar": ""
         }
     },
