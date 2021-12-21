@@ -1,0 +1,194 @@
+{
+    "GlobalKey__c": "Policy-Horiz-Home-lwc/VEX Personal Lines/1/1585101173610",
+    "dataSource": {
+        "type": null
+    },
+    "enableLwc": true,
+    "filter": {
+        "['%vlocity_namespace%__Type__c']": "Homeowners"
+    },
+    "icon": "home",
+    "sprite": "standard",
+    "states": [
+        {
+            "actionCtxId": "['Id']",
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                    {
+                        "collapse": true,
+                        "displayName": "View",
+                        "hasExtraParams": false,
+                        "iconName": "icon-v-view",
+                        "id": "np-view-policy-detail",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "VPL-PolicyAsset-Sample-Inquiry",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "PolServ_ModifyCoverages",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    },
+                    {
+                        "collapse": true,
+                        "hasExtraParams": false,
+                        "id": "PolServ_CancelPolicy",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    }
+                ]
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "editing": false,
+                    "fieldType": "standard",
+                    "label": "",
+                    "name": "['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__Type__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Type",
+                    "name": "['%vlocity_namespace%__Type__c']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['Account']['Name']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Policy Holder",
+                    "name": "['Account']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__PrimaryProducerId__r']['Name']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Producer",
+                    "name": "['%vlocity_namespace%__PrimaryProducerId__r']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__AnnualPremium__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Annual Premium",
+                    "name": "['%vlocity_namespace%__AnnualPremium__c']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__ExpirationDate__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Expiration Date",
+                    "name": "['%vlocity_namespace%__ExpirationDate__c']",
+                    "type": "date"
+                }
+            ],
+            "filter": "$scope.data.status === 'active'",
+            "flyout": {
+                "layout": "VPL-PolicyAsset-InsuredItem-Flyout-15-1"
+            },
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "cardHorizActiveLwc",
+                "Id": "0Rb3i000000bwqWCAQ",
+                "MasterLabel": "cardHorizActiveLwc",
+                "name": "cardHorizActiveLwc"
+            },
+            "name": "Home",
+            "sObjectType": "Asset",
+            "smartAction": {
+            },
+            "templateUrl": "card-horiz-noActions-slds"
+        },
+        {
+            "blankCardState": true,
+            "blankStateCheck": true,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'non-existent'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                    {
+                        "collapse": true,
+                        "displayName": "Homeowners Quote",
+                        "hasExtraParams": false,
+                        "id": "Homeowners Quote",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000Tt0EEAS",
+                            "Language": "English",
+                            "Name": "propertylwc/HomeQuote/English",
+                            "SubType": "HomeQuote",
+                            "Type": "propertylwc",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-plus"
+                    }
+                ]
+            },
+            "fields": [
+            ],
+            "filter": "$scope.data.status === 'non-existent'",
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "cardHorizOpenLwc",
+                "Id": "0Rb3i000000bwqRCAQ",
+                "MasterLabel": "cardHorizOpenLwc",
+                "name": "cardHorizOpenLwc"
+            },
+            "name": "Home-open",
+            "sObjectType": "Account",
+            "smartAction": {
+            },
+            "templateUrl": "card-horiz-open-slds"
+        }
+    ],
+    "title": "Home"
+}

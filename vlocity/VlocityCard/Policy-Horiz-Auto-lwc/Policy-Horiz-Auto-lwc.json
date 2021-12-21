@@ -1,0 +1,185 @@
+{
+    "GlobalKey__c": "Policy-Horiz-Auto-lwc/VEX Personal Lines/1/1585101158399",
+    "dataSource": {
+        "type": null
+    },
+    "enableLwc": true,
+    "filter": {
+        "['%vlocity_namespace%__Type__c']": "Auto"
+    },
+    "icon": "custom31",
+    "sprite": "custom",
+    "states": [
+        {
+            "actionCtxId": "['Id']",
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    },
+                    {
+                        "field": "%vlocity_namespace%__Type__c",
+                        "logicalOperator": "&&",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Auto"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                    {
+                        "collapse": true,
+                        "displayName": "View",
+                        "hasExtraParams": false,
+                        "iconName": "icon-v-view",
+                        "id": "np-view-policy-detail",
+                        "isCustomAction": false,
+                        "type": "Vlocity Action"
+                    }
+                ]
+            },
+            "disableAddCondition": false,
+            "fields": [
+                {
+                    "collapse": true,
+                    "editing": false,
+                    "fieldType": "standard",
+                    "label": "",
+                    "name": "['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__Type__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Type",
+                    "name": "['%vlocity_namespace%__Type__c']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['Account']['Name']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Policy Holder",
+                    "name": "['Account']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__PrimaryProducerId__r']['Name']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Producer",
+                    "name": "['%vlocity_namespace%__PrimaryProducerId__r']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['%vlocity_namespace%__AnnualPremium__c']",
+                    "editing": false,
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "Annual Premium",
+                    "name": "['%vlocity_namespace%__AnnualPremium__c']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "editing": false,
+                    "fieldType": "standard",
+                    "label": "Expiration Date",
+                    "name": "['%vlocity_namespace%__ExpirationDate__c']",
+                    "type": "date"
+                }
+            ],
+            "filter": "$scope.data.status === 'active' && $scope.obj.%vlocity_namespace%__Type__c == 'Auto'",
+            "flyout": {
+                "data": "",
+                "layout": "VPL-Policy-InsuredItems-15-1"
+            },
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "cardHorizActiveLwc",
+                "Id": "0Rb3i000000bwqWCAQ",
+                "MasterLabel": "cardHorizActiveLwc",
+                "name": "cardHorizActiveLwc"
+            },
+            "name": "Auto",
+            "sObjectType": "Asset",
+            "smartAction": {
+            },
+            "templateUrl": "card-horiz-noActions-slds"
+        },
+        {
+            "blankCardState": true,
+            "blankStateCheck": true,
+            "collapse": true,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'non-existent'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                    {
+                        "collapse": true,
+                        "conditions": {
+                            "group": [
+                            ]
+                        },
+                        "displayName": "Auto Quote",
+                        "hasExtraParams": true,
+                        "id": "Auto Quote",
+                        "isCustomAction": true,
+                        "isLwcOS": true,
+                        "layoutType": "lightning",
+                        "omniLang": "",
+                        "omniSubType": "",
+                        "omniType": {
+                            "Id": "a3F3i000000Tt7LEAS",
+                            "Language": "English",
+                            "Name": "autoWC/Quote/English",
+                            "SubType": "Quote",
+                            "Type": "autoWC",
+                            "isLwc": true
+                        },
+                        "openUrlIn": "New Tab / Window",
+                        "type": "OmniScript",
+                        "vForcewithNsPrefix": "%vlocity_namespace%__OmniScriptUniversalPage",
+                        "vlocityIcon": "icon-v-plus"
+                    }
+                ]
+            },
+            "fields": [
+            ],
+            "filter": "$scope.data.status === 'non-existent'",
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "cardHorizOpenLwc",
+                "Id": "0Rb3i000000bwqRCAQ",
+                "MasterLabel": "cardHorizOpenLwc",
+                "name": "cardHorizOpenLwc"
+            },
+            "name": "Auto-open",
+            "sObjectType": "Account",
+            "smartAction": {
+            },
+            "templateUrl": "card-horiz-open-slds"
+        }
+    ],
+    "title": "Auto"
+}
